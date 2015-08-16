@@ -38,7 +38,7 @@ System.config({
     "aurelia-templating-binding": "github:aurelia/templating-binding@0.14.0",
     "aurelia-templating-resources": "github:aurelia/templating-resources@0.14.0",
     "aurelia-templating-router": "github:aurelia/templating-router@0.15.0",
-    "aurelia/fetch-client": "github:aurelia/fetch-client@0.1.1",    
+    "aurelia/fetch-client": "github:aurelia/fetch-client@0.1.1",
     "babel": "npm:babel-core@5.8.21",
     "babel-runtime": "npm:babel-runtime@5.8.20",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
@@ -81,7 +81,7 @@ System.config({
     },
     "github:aurelia/fetch-client@0.1.1": {
       "core-js": "npm:core-js@0.9.18"
-    },    
+    },
     "github:aurelia/fetch-client@0.1.2": {
       "core-js": "npm:core-js@0.9.18"
     },
@@ -212,7 +212,7 @@ System.config({
     },
     "npm:babel-runtime@5.8.20": {
       "process": "github:jspm/nodelibs-process@0.1.1"
-    },    
+    },
     "npm:buffer@3.4.2": {
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.6",

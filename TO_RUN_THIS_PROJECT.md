@@ -18,5 +18,7 @@ jspm cc             (to clear the caches)
 
 jspm install -y
 
+jspm install aurelia-fetch-client
+
 
 

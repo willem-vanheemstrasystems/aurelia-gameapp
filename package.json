@@ -4,7 +4,7 @@
   "description": "Aurelia Game App",
   "main": "index.js",
   "scripts": {
-    "preinstall": "sudo npm install -g gulp jspm"
+    "preinstall": "sudo npm install -g gulp jspm bower"
   },
   "repository": {
     "type": "git",

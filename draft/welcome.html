@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>DRAFT - Aurelia GameApp</title>
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->	 
+	<link href="assets/css/main_v2.css" rel="stylesheet" media="screen">
+	<link href="assets/css/prettify.css" rel="stylesheet" media="screen">   
+  </head>
+  <body>
+	<!-- Your HTML Goes Here! -->
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-body">
+			<p>Welcome to City Story Metro! I'm Anne, your assistant. Together, we'll build an amazing city!</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" onclick="location.href='instructions_1.html'" data-dismiss="modal">OK</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="assets/js/jquery.js">​</script>​
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="assets/js/bootstrap.min.js">​</script>​
+	<script src="assets/js/jquery.roughdraft.js">​</script>​
+	<script src="assets/js/prettify.js">​</script>​
+	<script src="assets/js/main.js">​</script>​
+	<script type="text/javascript">
+		$(window).load(function(){
+			$('#myModal').modal('show');
+		});
+	</script>
+  </body>
+</html>

@@ -18,18 +18,33 @@
   </head>
   <body>
 	<!-- Your HTML Goes Here! -->
-	<div class="container" style="margin-top:40px;">
-	  <div class="span4">  
-	    <div class="alert alert-info" role="alert">  
-	      Houses increase population. Tap on the Market to build one.  
-	    </div>  
-	  </div>  
-	</div>
-	<div class="container">
-	  <div data-draft-repeat="1">
-		<div style="float: right;">
-		  <button class="btn btn-warning btn-mini btn-block" onclick="location.href='instructions_2_1.html'" style="width:100px;">Market</button>
-		  <img data-draft-image="100/100" />
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <p>HOMES</p>
+		  </div>	
+		  <div class="modal-body">
+			<p style="float:left;padding:4px;">All</p><p style="float:left;padding:4px;"><b>Residence</b></p><p style="float:left;padding:4px;">Condos</p><p style="float:left;padding:4px;">Mansions</p>
+		  </div>
+		  <br class="clear">
+		  <div class="modal-footer">
+			<div style="float:left;">
+			  <button class="btn btn-warning btn-mini btn-block" onclick="location.href='instructions_3_1.html'" style="width:160px;">Blue Victorian House<br/>$200</button>
+			  <img data-draft-image="160/160" />
+			 </div> 
+			 <div style="float:left;padding:4px;">
+			    <button class="btn btn-default btn-mini btn-block" style="width:160px;">Yellow Victorian House<br/>$200</button>
+			    <img data-draft-image="160/160" />
+			  </div>
+			  <div style="float:left;padding:4px;">
+			    <button class="btn btn-default btn-mini btn-block" style="width:160px;">Red Victorian House<br/>$15</button>
+			    <img data-draft-image="160/160" />
+			  </div>
+			</div>
+		  </div>
 		</div>
 	  </div>
 	</div>
@@ -40,5 +55,10 @@
 	<script src="assets/js/jquery.roughdraft.js">​</script>​
 	<script src="assets/js/prettify.js">​</script>​
 	<script src="assets/js/main.js">​</script>​
+	<script type="text/javascript">
+		$(window).load(function(){
+			$('#myModal').modal('show');
+		});
+	</script>	
   </body>
 </html>

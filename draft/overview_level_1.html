@@ -23,39 +23,42 @@
 	  <div class="modal-dialog">
 		<!-- Modal content-->
 		<div class="modal-content">
-		  <div class="modal-header">
-		    <p>MARKET</p>
+		  <div class="modal-header" style="height:80px;">
+		    	  <ul class="nav navbar-nav">
+		    		<li class="inactive"><a href="menu.html"><h4>Menu</h4></a></li>
+		    		<li class="inactive" style="width:400px;text-align:center;"><h3>OVERVIEW</h3></li>
+		    		<li class="inactive"><a href="gameplay_1.html"><h4>Close</h4></a></li>
+		    	  </ul>
 		  </div>	
 		  <div class="modal-body">
-			<p style="float:left;padding:4px;">Featured</p><p style="float:left;padding:4px;">Mystery</p><p style="float:left;padding:4px;">Expand</p>
-		  </div>
-		  <br class="clear">
-		  <div class="modal-footer">
-			<div style="float:left;">
-			  <button class="btn btn-warning btn-mini btn-block" onclick="location.href='instructions_2.html'" style="width:100px;">Homes</button>
-			  <img data-draft-image="100/100" />
-			 </div> 
-			 <div style="float:left;padding:4px;">
-			    <button class="btn btn-default btn-mini btn-block" style="width:100px;">Business</button>
-			    <img data-draft-image="100/100" />
-			  </div>
-			  <div style="float:left;padding:4px;">
-			    <button class="btn btn-default btn-mini btn-block" style="width:100px;">Decor</button>
-			    <img data-draft-image="100/100" />
-			  </div>
-			  <div style="float:left;padding:4px;">
-			   <button class="btn btn-default btn-mini btn-block" style="width:100px;">Industry</button>
-			   <img data-draft-image="100/100" />
-			  </div> 
-			  <div style="float:left;padding:4px;">
-			     <button class="btn btn-default btn-mini btn-block" style="width:100px;">Wonders</button>
-			     <img data-draft-image="100/100" />
-			   </div>
-			   <div style="float:left;padding:4px;">
-			     <button class="btn btn-default btn-mini btn-block" style="width:100px;">Community</button>
-			     <img data-draft-image="100/100" />
-			   </div>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#profile">Profile</a></li>
+				<li><a data-toggle="tab" href="#wall">Wall</a></li>
+			</ul>
+			<div class="tab-content">
+				<div id="profile" class="tab-pane fade in active">
+					<p>City Name [Choose]</p>
+					<p>Profile Picture [Change]</p>
+					<p>Level: 1 (2/4)</p>
+					<p>Social Rating: 0/4</p>
+					<p>Neighbours: 0</p>
+					<p>Homes: 1</p>
+					<p>Businesses: 1</p>
+					<p>Community: 0</p>
+					<p>Industries: 0</p>
+					<p>Wonders: 0</p>
+					<p>Decorations: 1</p>
+				</div>
+				<div id="wall" class="tab-pane fade">
+					<h3>Post a message:</h3>
+					<input type="text"><button>Post</button>
+					<p>No one has written any messages yet.</p>
+				</div>
 			</div>
+		  </div>
+		  <br class="clear" />
+		  <div class="modal-footer">  
+			
 		  </div>
 		</div>
 	  </div>

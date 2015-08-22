@@ -7,6 +7,7 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>DRAFT - Aurelia GameApp</title>
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,11 +18,27 @@
 	<link href="assets/css/prettify.css" rel="stylesheet" media="screen">
 	<!-- Important: you'll only need one of the Bootcards CSS files below for every platform -->
 	<!-- Bootcards CSS for iOS: -->
-	<link rel="stylesheet" href="assets/css/bootcards-ios.min.css">
+	<link href="assets/css/bootcards-ios.min.css" rel="stylesheet"  media="screen">
 	<!-- Bootcards CSS for Android: -->
-	<link rel="stylesheet" href="assets/css/bootcards-android.min.css">
+	<link href="assets/css/bootcards-android.min.css" rel="stylesheet"  media="screen">
 	<!-- Bootcards CSS for desktop: -->
-	<link rel="stylesheet" href="assets/css/bootcards-desktop.min.css">	   
+	<link href="assets/css/bootcards-desktop.min.css" rel="stylesheet"  media="screen">
+	<style>
+		.rounded {
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+			border-bottom-left-radius: 6px;
+			border-bottom-right-radius: 6px;
+		}
+		.rounded-top {
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;			
+		}
+		.rounded-bottom {
+			border-bottom-left-radius: 6px;
+			border-bottom-right-radius: 6px;			
+		}
+    </style>		
   </head>
   <body>
 	<!-- Your HTML Goes Here! -->
@@ -29,8 +46,8 @@
 	<div id="myModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 		<!-- Modal content-->
-		<div class="modal-content">
-		  <div class="modal-header" style="height:80px;">
+		<div class="modal-content rounded">
+		  <div class="modal-header rounded-top" style="height:80px;">
 		    <ul class="nav navbar-nav">
 		    	<li class="inactive"><h4 style="width:70px;"></h4></li>
 		    	<li class="inactive" style="width:400px;text-align:center;"><h3>MENU</h3></li>
@@ -38,35 +55,57 @@
 		      </ul>
 		  </div>	
 		  <div class="modal-body">
-			<div style="float:left;">
-			  <button class="btn btn-default btn-mini btn-block" onclick="location.href='messages.html'" style="width:120px;">Messages</button>
-			  <img data-draft-image="120/120" />
-			 </div> 
-			 <div style="float:left;padding:4px;">
-				<button class="btn btn-default btn-mini btn-block" onclick="location.href='social_1.html'" style="width:120px;">Social</button>
-				<img data-draft-image="120/120" />
-			  </div>
-			  <div style="float:left;padding:4px;">
-				<button class="btn btn-default btn-mini btn-block" onclick="location.href='overview_level_1.html'" style="width:120px;">Overview</button>
-				<img data-draft-image="120/120" />
-			  </div>
-		  </div>
-		  <div class="modal-body">
-		  	<div style="float:left;">
-		  	  <button class="btn btn-default btn-mini btn-block" onclick="location.href='storage.html'" style="width:120px;">Storage</button>
-		  	  <img data-draft-image="120/120" />
-		  	 </div> 
-		  	 <div style="float:left;padding:4px;">
-		  		<button class="btn btn-default btn-mini btn-block" onclick="location.href='photo.html'" style="width:120px;">Photo</button>
-		  		<img data-draft-image="120/120" />
-		  	  </div>
-		  	  <div style="float:left;padding:4px;">
-		  		<button class="btn btn-default btn-mini btn-block" onclick="location.href='settings.html'" style="width:120px;">Settings</button><br/>
-		  		<button class="btn btn-default btn-mini btn-block" onclick="location.href='help_faq.html'" style="width:120px;">Help/FAQ</button>
-		  	  </div>
-		    </div>		  
-		  <br class="clear" />
-		  <div class="modal-footer">  
+			<div class="panel panel-default bootcards-summary">
+			  <div class="panel-body">
+				<div class="row">
+				  <div class="col-xs-6 col-sm-4">
+					<a class="bootcards-summary-item" href="messages.html">
+					  <i class="fa fa-3x fa-envelope-o"></i>
+					  <h4><span>Messages</span><span class="label label-info">0</span></h4>
+					</a>
+				  </div>
+				  <div class="col-xs-6 col-sm-4">
+					<a class="bootcards-summary-item" href="social_1.html">
+					  <i class="fa fa-3x fa-users"></i>
+					  <h4><span>Social</span></h4>
+					</a>
+				  </div>
+				  <div class="col-xs-6 col-sm-4">
+					<a class="bootcards-summary-item" href="overview_level_1.html">
+					  <i class="fa fa-3x fa-clipboard"></i>
+					  <h4><span>Overview</span></h4>
+					</a>
+				  </div>
+				</div>
+				<div class="row">
+				  <div class="col-xs-6 col-sm-4">
+					<a class="bootcards-summary-item" href="storage.html">
+					  <i class="fa fa-3x fa-stack-overflow"></i>
+					  <h4><span>Storage</span></h4>
+					</a>
+				  </div>
+				  <div class="col-xs-6 col-sm-4">
+					<a class="bootcards-summary-item" href="photo.html">
+					  <i class="fa fa-3x fa-picture-o"></i>
+					  <h4><span>Photo</span></h4>
+					</a>
+				  </div>
+				  <div class="col-xs-6 col-sm-4">
+					<a class="bootcards-summary-item" href="settings.html">
+					  <i class="fa fa-3x fa-cogs"></i>
+					  <h4><span>Settings</span></h4>
+					</a>
+				  </div>
+				  <div class="col-xs-6 col-sm-4">					
+					<a class="bootcards-summary-item" href="help_faq.html">
+					  <i class="fa fa-3x fa-question"></i>
+					  <h4><span>Help/FAQ</span></h4>
+					</a>					
+				  </div>
+				</div>
+			  </div> 
+			</div>
+		  <div class="modal-footer rounded-bottom">  
 		  </div>
 		</div>
 	  </div>

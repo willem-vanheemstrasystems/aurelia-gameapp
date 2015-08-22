@@ -7,6 +7,7 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<title>DRAFT - Aurelia GameApp</title>
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,22 +23,66 @@
 	<link rel="stylesheet" href="assets/css/bootcards-android.min.css">
 	<!-- Bootcards CSS for desktop: -->
 	<link rel="stylesheet" href="assets/css/bootcards-desktop.min.css">
+	<style>
+		.rounded {
+		   	border-top-left-radius: 6px;
+		   	border-top-right-radius: 6px;
+		   	border-bottom-left-radius: 6px;
+		   	border-bottom-right-radius: 6px;
+		}
+		.rounded-top {
+		   	border-top-left-radius: 6px;
+		   	border-top-right-radius: 6px;			
+		}
+		.rounded-bottom {
+		   	border-bottom-left-radius: 6px;
+		   	border-bottom-right-radius: 6px;			
+		}
+		.bubble {
+			width:400px;
+			color:#efefef;
+		}
+		.bubble .pointer {
+			height:15px;
+			background:#393939;
+		}
+		.bubble .pointer div {
+			height:100%;
+			background:#ffffff;
+		}
+		.bubble .pointer .one {
+			width:50%;
+			-moz-border-radius-bottomright: 15px;
+			-webkit-border-bottom-right-radius:15px;
+			float:left;
+		}
+		.bubble .pointer .two {
+			width:50%;
+			float:right;
+			-moz-border-radius-bottomleft: 15px;
+			-webkit-border-bottom-left-radius:15px;
+		}
+		.bubble .content {
+			padding:10px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius:10px;
+			background:#393939;
+			text-align:center;
+		}
+	</style>	
   </head>
   <body>
 	<!-- Your HTML Goes Here! -->
 	<!-- Modal -->
-	<div id="myModal" class="modal fade" role="dialog">
-	  <div class="modal-dialog">
-		<!-- Modal content-->
-		<div class="modal-content">
-		  <div class="modal-body">
-			<p>Welcome to City Story Metro! I'm Anne, your assistant. Together, we'll build an amazing city!</p>
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" onclick="location.href='instructions_1.html'" data-dismiss="modal">OK</button>
-		  </div>
+	<div id="myModal" class="bubble fade" role="dialog">
+		<div class="pointer">
+			<div class="one"></div>
+			<div class="two"></div>
 		</div>
-	  </div>
+		<div class="modal-content content">
+			<p>Welcome to City Story Metro! I'm Anne, your assistant. Together, we'll build an amazing city!</p>
+			<button type="button" class="btn btn-default" onclick="location.href='instructions_1.html'" data-dismiss="modal">OK</button>
+		</div>
 	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="assets/js/jquery.js">​</script>​

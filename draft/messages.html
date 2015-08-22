@@ -14,16 +14,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->	 
 	<link href="assets/css/main_v2.css" rel="stylesheet" media="screen">
-	<link href="assets/css/prettify.css" rel="stylesheet" media="screen">
-	<!-- Important: you'll only need one of the Bootcards CSS files below for every platform -->
-	<!-- Bootcards CSS for iOS: -->
-	<link rel="stylesheet" href="assets/css/bootcards-ios.min.css">
-	<!-- Bootcards CSS for Android: -->
-	<link rel="stylesheet" href="assets/css/bootcards-android.min.css">
-	<!-- Bootcards CSS for desktop: -->
-	<link rel="stylesheet" href="assets/css/bootcards-desktop.min.css">
-	<!-- Bootcards JS -->
-	<script src="assets/js/bootcards.min.js"></script>
+	<link href="assets/css/prettify.css" rel="stylesheet" media="screen">   
   </head>
   <body>
 	<!-- Your HTML Goes Here! -->
@@ -32,11 +23,23 @@
 	  <div class="modal-dialog">
 		<!-- Modal content-->
 		<div class="modal-content">
+		  <div class="modal-header" style="height:80px;">
+		    	  <ul class="nav navbar-nav">
+		    		<li class="inactive"><a href="menu.html"><h4>Menu</h4></a></li>
+		    		<li class="inactive" style="width:400px;text-align:center;"><h3>MESSAGES</h3></li>
+		    		<li class="inactive"><a href="gameplay_1.html"><h4>Close</h4></a></li>
+		    	  </ul>
+		  </div>	
 		  <div class="modal-body">
-			<p>Welcome to City Story Metro! I'm Anne, your assistant. Together, we'll build an amazing city!</p>
+			<div class="tab-content">
+				<div id="profile" class="tab-pane fade in active">
+					<p>You have 0 messages</p>
+				</div>
+			</div>
 		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" onclick="location.href='instructions_1.html'" data-dismiss="modal">OK</button>
+		  <br class="clear" />
+		  <div class="modal-footer">  
+			
 		  </div>
 		</div>
 	  </div>
@@ -52,6 +55,6 @@
 		$(window).load(function(){
 			$('#myModal').modal('show');
 		});
-	</script>
+	</script>	
   </body>
 </html>

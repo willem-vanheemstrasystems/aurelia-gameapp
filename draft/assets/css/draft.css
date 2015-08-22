@@ -1,0 +1,45 @@
+.rounded {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+.rounded-top {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;			
+}
+.rounded-bottom {
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;			
+}
+.bubble {
+	width:400px;
+	color:#efefef;
+}
+.bubble .pointer {
+	height:15px;
+	background:#393939;
+}
+.bubble .pointer div {
+	height:100%;
+	background:#ffffff;
+}
+.bubble .pointer .one {
+	width:50%;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-bottom-right-radius:15px;
+	float:left;
+}
+.bubble .pointer .two {
+	width:50%;
+	float:right;
+	-moz-border-radius-bottomleft: 15px;
+	-webkit-border-bottom-left-radius:15px;
+}
+.bubble .content {
+	padding:10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius:10px;
+	background:#393939;
+	text-align:center;
+}

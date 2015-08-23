@@ -23,8 +23,10 @@
 	<link rel="stylesheet" href="assets/css/bootcards-android.min.css">
 	<!-- Bootcards CSS for desktop: -->
 	<link rel="stylesheet" href="assets/css/bootcards-desktop.min.css">
+	<link rel="stylesheet" href="assets/css/jquery.gridster.css">	
 	<!-- Draft -->
-	<link rel="stylesheet" href="assets/css/draft.css">	   
+	<link rel="stylesheet" href="assets/css/draft.css">
+	<link rel="stylesheet" href="assets/css/draft-grid.css">		   
   </head>
   <body>
 	<!-- Your HTML Goes Here! -->
@@ -71,13 +73,30 @@
 		</div>
 	  </div>
 	</div>
-	<div class="container">
-	  <div data-draft-repeat="1">
-		<div style="float: right;margin-right:200px;margin-top:200px;">
-		  <button class="btn btn-default btn-mini btn-block" style="width:100px;font-size:10px;padding:0px;">Blue Victorian House</button>
-		  <img data-draft-image="100/100" />
+	<div class="container">	
+		<div class="gridster">
+			<ul>
+				<!--<li data-row="1" data-col="1" data-sizex="1" data-sizey="1"></li>-->
+				<li data-row="2" data-col="1" data-sizex="1" data-sizey="1"></li>
+				<li data-row="3" data-col="1" data-sizex="1" data-sizey="1"></li>
+				<li data-row="4" data-col="1" data-sizex="1" data-sizey="1"></li>
+
+				<li data-row="1" data-col="2" data-sizex="1" data-sizey="1"></li>
+				<li data-row="2" data-col="2" data-sizex="1" data-sizey="1"></li>
+				<li data-row="3" data-col="2" data-sizex="1" data-sizey="1"></li>
+				<li data-row="4" data-col="2" data-sizex="1" data-sizey="1"></li>
+
+				<li data-row="1" data-col="3" data-sizex="1" data-sizey="1"></li>
+				<li data-row="2" data-col="3" data-sizex="1" data-sizey="1"></li>
+				<li data-row="3" data-col="3" data-sizex="1" data-sizey="1"></li>
+				<li data-row="4" data-col="3" data-sizex="1" data-sizey="1"></li>	
+
+				<li data-row="1" data-col="4" data-sizex="1" data-sizey="1"></li>
+				<li data-row="2" data-col="4" data-sizex="1" data-sizey="1"></li>
+				<li data-row="3" data-col="4" data-sizex="1" data-sizey="1"></li>
+				<li data-row="4" data-col="4" data-sizex="1" data-sizey="1"></li>								
+			</ul>
 		</div>
-	  </div>
 	</div>
 	<div class="container">
 	  <div data-draft-repeat="1">
@@ -106,9 +125,22 @@
 	<script src="assets/js/bootcards.min.js"></script>	
 	<script src="assets/js/jquery.roughdraft.js">​</script>​
 	<script src="assets/js/prettify.js">​</script>​
-	<script src="assets/js/main.js">​</script>​
+	<script src="assets/js/jquery.gridster.js"></script>​	
+	<script src="assets/js/main.js">​</script>​	
 	<script type="text/javascript">
+		var gridster;
 		$(window).load(function(){
+			gridster = $(".gridster ul").gridster({
+				widget_margins: [10, 10],
+				widget_base_dimensions: [140, 140],
+				max_cols: 4,
+				max_rows: 4,
+				draggable: {
+					handle: 'header'
+				}
+			}).data('gridster');
+			var widget_html = '<li class="new"><header>|||</header>Blue Victorian House</li>';
+			gridster.add_widget(widget_html, 1, 1, 1, 1);
 			$('#myModal1').modal('show');
 		});
 	</script>

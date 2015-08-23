@@ -108,5 +108,79 @@
 			gridster.add_widget(widget_html, 1, 1, 1, 1);
 		});
     </script>
+	<script type="text/javascript">
+	  // TESTING CREATING A HEADS-UP DISPLAY (HUD)
+	  // See also http://answers.playcanvas.com/questions/15/how-can-i-add-a-hud-to-my-playcanvas-game
+/*
+	  // Using an Immediately-Invoked Function Expression, or shorter: IIFE. It executes immediately after it’s created.
+	  (function(){
+	  	var HUD = function(entity) {
+		  	// all your code here
+		  	this.entity = entity;
+	  	};
+	  	HUD.prototype = {
+		  initialize: function() {
+			  // Create a div inside the main page
+			  var div = document.createElement('div');
+			  
+			  // Add the div to the DOM as a child of the document's body element
+			  document.body.appendChild(div);
+			  this.div = div;
+			  // Set some default state on the HUD element
+			  this.setText('GAME OVER');
+			  this.setVisibility(true);
+		  },
+		  // Some utility functions that can be called from other scripts
+		  // For example: 
+		  // var hudEntity = document.findByName('HUD');
+		  // hudEntity.setText('LEVEL CLEARED');
+		  setVisibility: function(visibility) {
+			  this.div.style.visibility = visible ? 'visible': 'hidden';
+		  },
+		  setText: function(message) {
+			  this.div.innerHTML = message;
+		  }
+		};
+		//return HUD;
+	  	window.onload = HUD;
+	  	// ...
+	  })();
+	  // foo is unreachable here (it’s undefined)
+*/	  
+	  var HUD;
+	  $(window).load(function(){
+		HUD = function(entity) {
+			console.log('HUD defined');
+			this.entity = entity;
+		};
+		HUD.prototype = {
+		  initialize: function() {
+			  console.log('HUD.prototype initialized');
+			  // Create a div inside the main page
+			  var div = document.createElement('div');
+			  
+			  // Add the div to the DOM as a child of the document's body element
+			  document.body.appendChild(div);
+			  this.div = div;
+			  // Set some default state on the HUD element
+			  this.setText('GAME OVER');
+			  this.setVisibility(true);
+		  },
+		  // Some utility functions that can be called from other scripts
+		  // For example: 
+		  // var hudEntity = new HUD();
+		  // hudEntity.setText('LEVEL CLEARED');
+		  setVisibility: function(visible) {
+			  console.log('HUD.setVisibility called');
+			  this.div.style.visibility = visible ? 'visible': 'hidden';
+		  },
+		  setText: function(message) {
+			  console.log('HUD.setText called');
+			  this.div.innerHTML = message;
+		  }
+		};
+		return HUD;
+	  });
+	</script>    
   </body>
 </html>
